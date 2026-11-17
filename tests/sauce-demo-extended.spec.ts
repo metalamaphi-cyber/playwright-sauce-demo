@@ -46,7 +46,7 @@ test.describe('Sauce Demo Full Suite', () => {
     await inventoryPage.goToCart();
     await inventoryPage.page.locator('[data-test="continue-shopping"]').click();
     await inventoryPage.goToCart();
-    await expect(inventoryPage.page.locator('.inventory_item_name')).toHaveText('Sauce Labs Backpack');
+    await expect(inventoryPage.page.locator('.cart_item .inventory_item_name')).toHaveText('Sauce Labs Backpack');
   });
 
   test('4. Negative Checkout: Missing Postal Code', async () => {
